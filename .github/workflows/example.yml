@@ -1,0 +1,10 @@
+name: Test
+on: push
+jobs:
+  sample_action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print trigger
+        run: echo "Triggered by ${{ github.event_name }} event."
+      - run: echo "Job running on a ${{ runner.os }} server."
+      - run: echo "Branch ${{ github.ref }}, repository ${{ github.repository }}."
